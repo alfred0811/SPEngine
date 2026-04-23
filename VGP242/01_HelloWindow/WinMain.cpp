@@ -2,6 +2,7 @@
 
 using namespace SPEngine;
 using namespace SPEngine::Core;
+using namespace SPEngine::Input;
 
 class MainState : public AppState
 {
@@ -9,11 +10,10 @@ public:
 	void Initialize() override
 	{
 		LOG("MainState: Initialize");
-		mStartTime = TimeUtil::GetTime();
 	}
 	void Update(float deltaTime) override
 	{
-		if (TimeUtil::GetTime() - mStartTime > 3.0f)
+		if (InputSystem::Get()->IsKeyPressed(KeyCode::G))
 		{
 			MainApp().ChangeState("GameState");
 		}
@@ -22,9 +22,6 @@ public:
 	{
 		LOG("MainState: Terminate");
 	}
-
-private:
-	float mStartTime = 0.0f;
 };
 
 class GameState : public AppState
@@ -33,11 +30,10 @@ public:
 	void Initialize() override
 	{
 		LOG("GameState: Initialize");
-		mStartTime = TimeUtil::GetTime();
 	}
 	void Update(float deltaTime) override
 	{
-		if (TimeUtil::GetTime() > 3.0f)
+		if (InputSystem::Get()->IsKeyPressed(KeyCode::M))
 		{
 			MainApp().ChangeState("MainState");
 		}
@@ -46,9 +42,6 @@ public:
 	{
 		LOG("GameState: Terminate");
 	}
-
-private:
-	float mStartTime = 0.0f;
 };
 
 int WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int)
