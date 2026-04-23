@@ -2,37 +2,34 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Inc">
-      <UniqueIdentifier>{f08bcdea-f0e2-4276-9a74-7c8157a0e512}</UniqueIdentifier>
+      <UniqueIdentifier>{bdf070b2-a93e-41d4-8c6a-066672291d57}</UniqueIdentifier>
     </Filter>
     <Filter Include="Src">
-      <UniqueIdentifier>{498b51dd-e321-40b8-b90d-9eb5ecdb2156}</UniqueIdentifier>
+      <UniqueIdentifier>{1fb265cd-50e4-4bb3-8efc-c84f2217bd35}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Inc\SPEngine.h">
+    <ClInclude Include="Inc\Common.h">
       <Filter>Inc</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\Common.h">
+    <ClInclude Include="Inc\Input.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\InputSystem.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\InputTypes.h">
       <Filter>Inc</Filter>
     </ClInclude>
     <ClInclude Include="Src\Precompiled.h">
       <Filter>Src</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\App.h">
-      <Filter>Inc</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\AppState.h">
-      <Filter>Inc</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Src\InputSystem.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
     <ClCompile Include="Src\Precompiled.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\App.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\SPEngine.cpp">
       <Filter>Src</Filter>
     </ClCompile>
   </ItemGroup>
