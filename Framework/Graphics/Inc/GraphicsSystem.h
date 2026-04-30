@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Color.h"
+
 namespace SPEngine::Graphics
 {
 	class GraphicsSystem final
@@ -32,7 +34,7 @@ namespace SPEngine::Graphics
 		void ResetRenderTarget();
 		void ResetViewport();
 
-		// void SetClearColor();
+		void SetClearColor(const Color& color);
 		void SetVSync(bool vSync);
 
 		uint32_t GetBackBufferWidth() const;
@@ -45,7 +47,7 @@ namespace SPEngine::Graphics
 	private:
 		static LRESULT CALLBACK GraphicsSystemMessageHandler(HWND win, UINT msg, WPARAM wParam, LPARAM lParam);
 
-		ID3D11Device* mDevice = nullptr;
+		ID3D11Device* mD3DDevice = nullptr;
 		ID3D11DeviceContext* mImmediateContext = nullptr;
 
 		IDXGISwapChain* mSwapChain = nullptr;
@@ -57,7 +59,7 @@ namespace SPEngine::Graphics
 		DXGI_SWAP_CHAIN_DESC mSwapChainDesc{};
 		D3D11_VIEWPORT mViewport{};
 
-		// Color mClearColor = Colors::Black;
+		Color mClearColor = Colors::Black;
 		UINT mVSync = 1;
 	};
 }
