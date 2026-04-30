@@ -5,6 +5,7 @@
 using namespace SPEngine;
 using namespace SPEngine::Core;
 using namespace SPEngine::Input;
+using namespace SPEngine::Graphics;
 
 void App::Run(const AppConfig& config)
 {
@@ -21,6 +22,10 @@ void App::Run(const AppConfig& config)
 
 	auto handle = myWindow.GetWindowHandle();
 	InputSystem::StaticInitialize(handle);
+	GraphicsSystem::StaticInitialize(handle, config.fullScreen);
+
+	// BG Color
+	//GraphicsSystem::Get()->SetClearColor(Colors::Peru);
 
 	// after initializing singletons, initialize current state
 	ASSERT(mCurrentState != nullptr, "App: need an app state to run");
@@ -58,11 +63,16 @@ void App::Run(const AppConfig& config)
 		mCurrentState->Update(deltaTime);
 
 		// render flow
+		GraphicsSystem* gs = GraphicsSystem::Get();
+		gs->BeginRender();
+		mCurrentState->Render();
+		gs->EndRender();
 	}
 	// terminate active state
 	mCurrentState->Terminate();
 
 	// for all systems we build, terminate all singletons
+	GraphicsSystem::StaticTerminate();
 	InputSystem::StaticTerminate();
 
 	// close the application
