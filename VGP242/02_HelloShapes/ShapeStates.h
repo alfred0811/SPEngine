@@ -16,6 +16,7 @@ protected:
 	struct Vertex
 	{
 		SPEngine::Math::Vector3 position;
+		SPEngine::Graphics::Color color;
 	};
 	using Vertices = std::vector<Vertex>;
 	Vertices mVertices;
