@@ -1,2 +1,5 @@
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\GraphicsSystem.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\GraphicsSystem.obj
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\MeshBuffer.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\MeshBuffer.obj
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\PixelShader.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\PixelShader.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\Precompiled.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\Precompiled.obj
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\VertexShader.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\VertexShader.obj

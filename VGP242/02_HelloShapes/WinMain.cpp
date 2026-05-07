@@ -7,8 +7,10 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int)
 	config.appName = L"Hello Shapes";
 
 	SPEngine::App& myApp = SPEngine::MainApp();
+
 	// need states
 	myApp.AddState<ShapeStates>("ShapeStates");
+	myApp.AddState<QuadState>("QuadState");
 	myApp.Run(config);
 
 	return 0;
