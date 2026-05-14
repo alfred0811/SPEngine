@@ -19,31 +19,7 @@ protected:
 	SPEngine::Graphics::MeshBuffer mMeshBuffer;
 	SPEngine::Graphics::VertexShader mVertexShader;
 	SPEngine::Graphics::PixelShader mPixelShader;
-};
 
-class QuadState : public ShapeStates
-{
-public:
-	void Update(float deltaTime) override;
-
-protected:
-	void CreateShape() override;
-};
-
-class DiamondState : public ShapeStates
-{
-public:
-	void Update(float deltaTime) override;
-
-protected:
-	void CreateShape() override;
-};
-
-class HeartState : public ShapeStates
-{
-public:
-	void Update(float deltaTime) override;
-
-protected:
-	void CreateShape() override;
+	SPEngine::Graphics::Camera mCamera;
+	SPEngine::Graphics::ConstantBuffer mConstantBuffer;
 };

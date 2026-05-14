@@ -4,15 +4,12 @@
 int WINAPI WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int)
 {
 	SPEngine::AppConfig config;
-	config.appName = L"Hello Shapes";
+	config.appName = L"Hello Cube";
 
 	SPEngine::App& myApp = SPEngine::MainApp();
 
 	// need states
 	myApp.AddState<ShapeStates>("ShapeStates");
-	myApp.AddState<QuadState>("QuadState");
-	myApp.AddState<DiamondState>("DiamondState");
-	myApp.AddState<HeartState>("HeartState");
 	myApp.Run(config);
 
 	return 0;
