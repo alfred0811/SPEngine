@@ -1,1 +1,6 @@
-﻿  Core.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\Core.lib
+﻿  Precompiled.cpp
+  TimeUtil.cpp
+  Window.cpp
+  WindowMessageHandler.cpp
+  Generating Code...
+  Core.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\Core.lib

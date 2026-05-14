@@ -1,3 +1,701 @@
-﻿  WinMain.cpp
-  LINK : D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\02_HelloShapes.exe not found or not built by the last incremental link; performing full link
-  02_HelloShapes.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\02_HelloShapes.exe
+﻿  ShapeStates.cpp
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Quaternion.h(46,47): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Quaternion.h(46,60): error C2143: syntax error: missing ',' before '&'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(101,61): error C2039: 'Quaternion': is not a member of 'SPEngine::Math'
+  (compiling source file 'ShapeStates.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(3,11):
+      see declaration of 'SPEngine::Math'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(101,49): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(101,71): error C2143: syntax error: missing ',' before '&'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(105,32): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(105,38): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(105,53): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(105,59): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(106,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(106,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(106,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(106,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(107,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(107,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(107,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(107,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(110,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(110,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(110,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(110,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(111,32): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(111,38): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(111,53): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(111,59): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(112,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(112,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(112,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(112,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(115,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(115,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(115,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(115,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(116,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(116,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(116,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(116,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(117,32): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(117,38): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(117,53): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(117,59): error C2065: 'q': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(104,13): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'SPEngine::Math::Matrix4'
+  (compiling source file 'ShapeStates.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(104,13):
+      'SPEngine::Math::Matrix4::Matrix4': function does not take 7 arguments
+          D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(104,13):
+          while trying to match the argument list '(float, float, float, float, float, float, float)'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(50,25): error C2065: 'Vector3': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(50,33): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(51,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(51,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(55,34): error C2065: 'Vector3': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(55,42): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(56,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(56,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(60,28): error C2065: 'Vector3': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(60,36): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(61,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(61,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(65,30): error C2065: 'Vector3': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(65,38): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(66,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(66,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(70,27): error C2065: 'Vector3': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(70,35): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(71,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(71,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,20): error C2146: syntax error: missing ';' before identifier 'Normalize'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,38): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(76,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(76,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,15): error C2737: 'SpEngine::Math::Vector3': constexpr object must be initialized
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,15): error C2373: 'SpEngine::Math::Vector3': redefinition; different type modifiers
+  (compiling source file 'ShapeStates.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,12):
+      see declaration of 'SpEngine::Math::Vector3'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,23): error C2146: syntax error: missing ';' before identifier 'Cross'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,37): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(82,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(82,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,12): error C2086: 'int SpEngine::Math::Vector3': redefinition
+  (compiling source file 'ShapeStates.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,12):
+      see declaration of 'SpEngine::Math::Vector3'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,20): error C2146: syntax error: missing ';' before identifier 'TransformCoord'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,35): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,48): error C2143: syntax error: missing ',' before '&'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,19): error C2065: 'v': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,25): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,33): error C2065: 'v': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,39): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,47): error C2065: 'v': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,53): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,61): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,19): error C2065: 'v': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,25): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,33): error C2065: 'v': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,39): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,47): error C2065: 'v': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,53): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,61): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,19): error C2065: 'v': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,25): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,33): error C2065: 'v': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,39): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,47): error C2065: 'v': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,53): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,61): error C2065: 'm': undeclared identifier
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(96,16): error C2440: 'return': cannot convert from 'initializer list' to 'int'
+  (compiling source file 'ShapeStates.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(96,16):
+      The initializer contains too many elements
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(97,5): error C2617: 'SpEngine::Math::TransformCoord': inconsistent return statement
+  (compiling source file 'ShapeStates.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,20):
+      see declaration of 'SpEngine::Math::TransformCoord'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,12): error C2086: 'int SpEngine::Math::Vector3': redefinition
+  (compiling source file 'ShapeStates.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,12):
+      see declaration of 'SpEngine::Math::Vector3'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,20): error C2146: syntax error: missing ';' before identifier 'TransformNormal'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,36): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,49): error C2143: syntax error: missing ',' before '&'
+  (compiling source file 'ShapeStates.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,49): error C1003: error count exceeds 100; stopping compilation
+  (compiling source file 'ShapeStates.cpp')
+  
+  WinMain.cpp
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Quaternion.h(46,47): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Quaternion.h(46,60): error C2143: syntax error: missing ',' before '&'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(101,61): error C2039: 'Quaternion': is not a member of 'SPEngine::Math'
+  (compiling source file 'WinMain.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(3,11):
+      see declaration of 'SPEngine::Math'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(101,49): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(101,71): error C2143: syntax error: missing ',' before '&'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(105,32): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(105,38): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(105,53): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(105,59): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(106,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(106,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(106,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(106,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(107,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(107,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(107,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(107,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(110,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(110,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(110,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(110,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(111,32): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(111,38): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(111,53): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(111,59): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(112,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(112,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(112,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(112,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(115,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(115,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(115,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(115,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(116,25): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(116,31): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(116,46): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(116,52): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(117,32): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(117,38): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(117,53): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(117,59): error C2065: 'q': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(104,13): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'SPEngine::Math::Matrix4'
+  (compiling source file 'WinMain.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(104,13):
+      'SPEngine::Math::Matrix4::Matrix4': function does not take 7 arguments
+          D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\Matrix4.h(104,13):
+          while trying to match the argument list '(float, float, float, float, float, float, float)'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(50,25): error C2065: 'Vector3': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(50,33): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(51,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(51,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(55,34): error C2065: 'Vector3': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(55,42): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(56,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(56,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(60,28): error C2065: 'Vector3': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(60,36): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(61,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(61,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(65,30): error C2065: 'Vector3': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(65,38): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(66,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(66,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(70,27): error C2065: 'Vector3': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(70,35): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(71,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(71,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,20): error C2146: syntax error: missing ';' before identifier 'Normalize'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,38): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(76,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(76,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,15): error C2737: 'SpEngine::Math::Vector3': constexpr object must be initialized
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,15): error C2373: 'SpEngine::Math::Vector3': redefinition; different type modifiers
+  (compiling source file 'WinMain.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,12):
+      see declaration of 'SpEngine::Math::Vector3'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,23): error C2146: syntax error: missing ';' before identifier 'Cross'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(81,37): error C2146: syntax error: missing ')' before identifier 'a'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(82,5): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(82,5): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,12): error C2086: 'int SpEngine::Math::Vector3': redefinition
+  (compiling source file 'WinMain.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,12):
+      see declaration of 'SpEngine::Math::Vector3'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,20): error C2146: syntax error: missing ';' before identifier 'TransformCoord'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,35): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,48): error C2143: syntax error: missing ',' before '&'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,19): error C2065: 'v': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,25): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,33): error C2065: 'v': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,39): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,47): error C2065: 'v': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,53): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(92,61): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,19): error C2065: 'v': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,25): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,33): error C2065: 'v': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,39): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,47): error C2065: 'v': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,53): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(93,61): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,19): error C2065: 'v': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,25): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,33): error C2065: 'v': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,39): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,47): error C2065: 'v': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,53): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(94,61): error C2065: 'm': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(96,16): error C2440: 'return': cannot convert from 'initializer list' to 'int'
+  (compiling source file 'WinMain.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(96,16):
+      The initializer contains too many elements
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(97,5): error C2617: 'SpEngine::Math::TransformCoord': inconsistent return statement
+  (compiling source file 'WinMain.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(90,20):
+      see declaration of 'SpEngine::Math::TransformCoord'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,12): error C2086: 'int SpEngine::Math::Vector3': redefinition
+  (compiling source file 'WinMain.cpp')
+      D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(75,12):
+      see declaration of 'SpEngine::Math::Vector3'
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,20): error C2146: syntax error: missing ';' before identifier 'TransformNormal'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,36): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,49): error C2143: syntax error: missing ',' before '&'
+  (compiling source file 'WinMain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Math\Inc\BMath.h(99,49): error C1003: error count exceeds 100; stopping compilation
+  (compiling source file 'WinMain.cpp')
+  
+  Generating Code...

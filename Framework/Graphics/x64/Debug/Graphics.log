@@ -1,1 +1,10 @@
-﻿  Graphics.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\Graphics.lib
+﻿  Precompiled.cpp
+  GraphicsSystem.cpp
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\GraphicsSystem.cpp(116,109): warning C4244: 'argument': conversion from 'float' to 'UINT8', possible loss of data
+  (compiling source file '/Src/GraphicsSystem.cpp')
+  
+  MeshBuffer.cpp
+  PixelShader.cpp
+  VertexShader.cpp
+  Generating Code...
+  Graphics.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\Graphics.lib
