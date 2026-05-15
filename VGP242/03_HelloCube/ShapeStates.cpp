@@ -86,7 +86,57 @@ void ShapeStates::Render()
 }
 void ShapeStates::CreateShape()
 {
-	mVertices.push_back({ {-0.5f, -0.5f, 0.0f }, { SPEngine::Graphics::Colors::Red } });
-	mVertices.push_back({ { 0.0f,  0.5f, 0.0f }, { SPEngine::Graphics::Colors::Green } });
-	mVertices.push_back({ { 0.5f, -0.5f, 0.0f }, { SPEngine::Graphics::Colors::Blue } });
+	// Front
+	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Red } });
+	mVertices.push_back({ { 0.5f,  0.5f, -0.5f }, { SPEngine::Graphics::Colors::Green } });
+	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
+
+	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Red } });
+	mVertices.push_back({ {-0.5f,  0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ { 0.5f,  0.5f, -0.5f }, { SPEngine::Graphics::Colors::Green } });
+
+	// Back
+	mVertices.push_back({ { 0.5f, -0.5f, 0.5f }, { SPEngine::Graphics::Colors::Green } });
+	mVertices.push_back({ { 0.5f,  0.5f, 0.5f }, { SPEngine::Graphics::Colors::Red } });
+	mVertices.push_back({ {-0.5f, -0.5f, 0.5f }, { SPEngine::Graphics::Colors::Blue } });
+
+	mVertices.push_back({ {-0.5f, -0.5f, 0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ { 0.5f,  0.5f, 0.5f }, { SPEngine::Graphics::Colors::Red } });
+	mVertices.push_back({ {-0.5f,  0.5f, 0.5f }, { SPEngine::Graphics::Colors::Green } });
+
+	// Right
+	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ { 0.5f,  0.5f,  0.5f }, { SPEngine::Graphics::Colors::Red } });
+	mVertices.push_back({ { 0.5f, -0.5f,  0.5f }, { SPEngine::Graphics::Colors::Green } });
+
+	mVertices.push_back({ { 0.5f,  0.5f, -0.5f }, { SPEngine::Graphics::Colors::Green } });
+	mVertices.push_back({ { 0.5f,  0.5f,  0.5f }, { SPEngine::Graphics::Colors::Red } });
+	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
+
+	// Left
+	mVertices.push_back({ {-0.5f, -0.5f,  0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ {-0.5f,  0.5f,  0.5f }, { SPEngine::Graphics::Colors::Green } });
+	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Red } });
+
+	mVertices.push_back({ {-0.5f,  0.5f,  0.5f }, { SPEngine::Graphics::Colors::Green } });
+	mVertices.push_back({ {-0.5f,  0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Red } });
+
+	// Top
+	mVertices.push_back({ {-0.5f, 0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ { 0.5f, 0.5f,  0.5f }, { SPEngine::Graphics::Colors::Red } });
+	mVertices.push_back({ { 0.5f, 0.5f, -0.5f }, { SPEngine::Graphics::Colors::Green } });
+
+	mVertices.push_back({ {-0.5f, 0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ {-0.5f, 0.5f,  0.5f }, { SPEngine::Graphics::Colors::Green } });
+	mVertices.push_back({ { 0.5f, 0.5f,  0.5f }, { SPEngine::Graphics::Colors::Red } });
+
+	// Bottom
+	mVertices.push_back({ {-0.5f, -0.5f,  0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ { 0.5f, -0.5f,  0.5f }, { SPEngine::Graphics::Colors::Green } });
+
+	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ {-0.5f, -0.5f,  0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Red } });
 }
