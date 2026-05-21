@@ -9,5 +9,6 @@ namespace SPEngine::Graphics
 	public:
 		// cube
 		static MeshPC CreateVertexCubePC(float size, const Color& color);
+		static MeshPC CreateCubePC(float size);
 	};
 }

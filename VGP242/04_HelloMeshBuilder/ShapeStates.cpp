@@ -11,7 +11,7 @@ void ShapeStates::Initialize()
 
 	// create shape
 	CreateShape();
-	mMeshBuffer.Initialize(mMesh.vertices.data(), sizeof(VertexPC), mMesh.vertices.size());
+	mMeshBuffer.Initialize(mMesh);
 
 	std::filesystem::path shaderPath = L"../../Assets/Shaders/DoTransform.fx";
 	mVertexShader.Initialize<VertexPC>(shaderPath);
@@ -85,5 +85,6 @@ void ShapeStates::Render()
 }
 void ShapeStates::CreateShape()
 {
-	mMesh = MeshBuilder::CreateVertexCubePC(1.0f, Colors::Green);
+	// mMesh = MeshBuilder::CreateVertexCubePC(1.0f, Colors::Green);
+	mMesh = MeshBuilder::CreateCubePC(1.0f);
 }

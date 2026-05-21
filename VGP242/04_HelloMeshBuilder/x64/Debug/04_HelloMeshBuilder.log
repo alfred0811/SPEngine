@@ -1,5 +1,1 @@
-﻿  ShapeStates.cpp
-D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\VGP242\04_HelloMeshBuilder\ShapeStates.cpp(14,85): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
-  WinMain.cpp
-  Generating Code...
-  04_HelloMeshBuilder.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\04_HelloMeshBuilder.exe
+﻿  04_HelloMeshBuilder.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\04_HelloMeshBuilder.exe
