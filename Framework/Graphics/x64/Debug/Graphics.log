@@ -1,2 +1,8 @@
 ﻿  MeshBuilder.cpp
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\MeshBuilder.cpp(173,58): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/Src/MeshBuilder.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\MeshBuilder.cpp(173,18): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+  (compiling source file '/Src/MeshBuilder.cpp')
+  
   Graphics.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\Graphics.lib

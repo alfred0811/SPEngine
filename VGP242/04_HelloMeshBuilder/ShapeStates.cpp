@@ -86,5 +86,10 @@ void ShapeStates::Render()
 void ShapeStates::CreateShape()
 {
 	// mMesh = MeshBuilder::CreateVertexCubePC(1.0f, Colors::Green);
-	mMesh = MeshBuilder::CreateCubePC(1.0f);
+	// mMesh = MeshBuilder::CreateCubePC(1.0f);
+	// mMesh = MeshBuilder::CreateBoxPC(3.0f, 2.0f, 1.0f);
+	// mMesh = MeshBuilder::CreatePyramidPC(1.0f);
+	// mMesh = MeshBuilder::CreatePlanePC(10, 10, 1.0f);
+	// mMesh = MeshBuilder::CreateCylinderPC(10, 1);
+	mMesh = MeshBuilder::CreateSpherePC(20, 20, 1.0f);
 }
