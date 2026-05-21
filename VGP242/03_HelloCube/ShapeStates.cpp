@@ -87,56 +87,56 @@ void ShapeStates::Render()
 void ShapeStates::CreateShape()
 {
 	// Front
-	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Red } });
-	mVertices.push_back({ { 0.5f,  0.5f, -0.5f }, { SPEngine::Graphics::Colors::Green } });
-	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { Colors::Red } });
+	mVertices.push_back({ { 0.5f,  0.5f, -0.5f }, { Colors::Green } });
+	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { Colors::Blue } });
 
-	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Red } });
-	mVertices.push_back({ {-0.5f,  0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
-	mVertices.push_back({ { 0.5f,  0.5f, -0.5f }, { SPEngine::Graphics::Colors::Green } });
+	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { Colors::Red } });
+	mVertices.push_back({ {-0.5f,  0.5f, -0.5f }, { Colors::Blue } });
+	mVertices.push_back({ { 0.5f,  0.5f, -0.5f }, { Colors::Green } });
 
 	// Back
-	mVertices.push_back({ { 0.5f, -0.5f, 0.5f }, { SPEngine::Graphics::Colors::Green } });
-	mVertices.push_back({ { 0.5f,  0.5f, 0.5f }, { SPEngine::Graphics::Colors::Red } });
-	mVertices.push_back({ {-0.5f, -0.5f, 0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ { 0.5f, -0.5f, 0.5f }, { Colors::Green } });
+	mVertices.push_back({ { 0.5f,  0.5f, 0.5f }, { Colors::Red } });
+	mVertices.push_back({ {-0.5f, -0.5f, 0.5f }, { Colors::Blue } });
 
-	mVertices.push_back({ {-0.5f, -0.5f, 0.5f }, { SPEngine::Graphics::Colors::Blue } });
-	mVertices.push_back({ { 0.5f,  0.5f, 0.5f }, { SPEngine::Graphics::Colors::Red } });
-	mVertices.push_back({ {-0.5f,  0.5f, 0.5f }, { SPEngine::Graphics::Colors::Green } });
+	mVertices.push_back({ {-0.5f, -0.5f, 0.5f }, { Colors::Blue } });
+	mVertices.push_back({ { 0.5f,  0.5f, 0.5f }, { Colors::Red } });
+	mVertices.push_back({ {-0.5f,  0.5f, 0.5f }, { Colors::Green } });
 
 	// Right
-	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
-	mVertices.push_back({ { 0.5f,  0.5f,  0.5f }, { SPEngine::Graphics::Colors::Red } });
-	mVertices.push_back({ { 0.5f, -0.5f,  0.5f }, { SPEngine::Graphics::Colors::Green } });
+	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { Colors::Blue } });
+	mVertices.push_back({ { 0.5f,  0.5f,  0.5f }, { Colors::Red } });
+	mVertices.push_back({ { 0.5f, -0.5f,  0.5f }, { Colors::Green } });
 
-	mVertices.push_back({ { 0.5f,  0.5f, -0.5f }, { SPEngine::Graphics::Colors::Green } });
-	mVertices.push_back({ { 0.5f,  0.5f,  0.5f }, { SPEngine::Graphics::Colors::Red } });
-	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
+	mVertices.push_back({ { 0.5f,  0.5f, -0.5f }, { Colors::Green } });
+	mVertices.push_back({ { 0.5f,  0.5f,  0.5f }, { Colors::Red } });
+	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { Colors::Blue } });
 
 	// Left
-	mVertices.push_back({ {-0.5f, -0.5f,  0.5f }, { SPEngine::Graphics::Colors::Blue } });
-	mVertices.push_back({ {-0.5f,  0.5f,  0.5f }, { SPEngine::Graphics::Colors::Green } });
-	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Red } });
+	mVertices.push_back({ {-0.5f, -0.5f,  0.5f }, { Colors::Blue } });
+	mVertices.push_back({ {-0.5f,  0.5f,  0.5f }, { Colors::Green } });
+	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { Colors::Red } });
 
-	mVertices.push_back({ {-0.5f,  0.5f,  0.5f }, { SPEngine::Graphics::Colors::Green } });
-	mVertices.push_back({ {-0.5f,  0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
-	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Red } });
+	mVertices.push_back({ {-0.5f,  0.5f,  0.5f }, { Colors::Green } });
+	mVertices.push_back({ {-0.5f,  0.5f, -0.5f }, { Colors::Blue } });
+	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { Colors::Red } });
 
 	// Top
-	mVertices.push_back({ {-0.5f, 0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
-	mVertices.push_back({ { 0.5f, 0.5f,  0.5f }, { SPEngine::Graphics::Colors::Red } });
-	mVertices.push_back({ { 0.5f, 0.5f, -0.5f }, { SPEngine::Graphics::Colors::Green } });
+	mVertices.push_back({ {-0.5f, 0.5f, -0.5f }, { Colors::Blue } });
+	mVertices.push_back({ { 0.5f, 0.5f,  0.5f }, { Colors::Red } });
+	mVertices.push_back({ { 0.5f, 0.5f, -0.5f }, { Colors::Green } });
 
-	mVertices.push_back({ {-0.5f, 0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
-	mVertices.push_back({ {-0.5f, 0.5f,  0.5f }, { SPEngine::Graphics::Colors::Green } });
-	mVertices.push_back({ { 0.5f, 0.5f,  0.5f }, { SPEngine::Graphics::Colors::Red } });
+	mVertices.push_back({ {-0.5f, 0.5f, -0.5f }, { Colors::Blue } });
+	mVertices.push_back({ {-0.5f, 0.5f,  0.5f }, { Colors::Green } });
+	mVertices.push_back({ { 0.5f, 0.5f,  0.5f }, { Colors::Red } });
 
 	// Bottom
-	mVertices.push_back({ {-0.5f, -0.5f,  0.5f }, { SPEngine::Graphics::Colors::Blue } });
-	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
-	mVertices.push_back({ { 0.5f, -0.5f,  0.5f }, { SPEngine::Graphics::Colors::Green } });
-
-	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Blue } });
-	mVertices.push_back({ {-0.5f, -0.5f,  0.5f }, { SPEngine::Graphics::Colors::Blue } });
-	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { SPEngine::Graphics::Colors::Red } });
+	mVertices.push_back({ {-0.5f, -0.5f,  0.5f }, { Colors::Blue } });
+	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { Colors::Blue } });
+	mVertices.push_back({ { 0.5f, -0.5f,  0.5f }, { Colors::Green } });
+												    
+	mVertices.push_back({ { 0.5f, -0.5f, -0.5f }, { Colors::Blue } });
+	mVertices.push_back({ {-0.5f, -0.5f,  0.5f }, { Colors::Blue } });
+	mVertices.push_back({ {-0.5f, -0.5f, -0.5f }, { Colors::Red } });
 }
