@@ -213,6 +213,28 @@ MeshPC MeshBuilder::CreateCylinderPC(int slices, int rings)
 
 	CreatePlaneIndices(mesh.indices, rings, slices);
 
+	// add top and bottom
+	int topCenterIndex = static_cast<int>(mesh.vertices.size());
+	mesh.vertices.push_back({ { 0.0f, hh, 0.0f }, GetNextColor(index) });
+
+	for (int s = 0; s < slices; ++s)
+	{
+		int topRingIndex = rings * (slices + 1);
+		mesh.indices.push_back(topCenterIndex);
+		mesh.indices.push_back(topRingIndex + s + 1);
+		mesh.indices.push_back(topRingIndex + s);
+	}
+
+	int bottomCenterIndex = static_cast<int>(mesh.vertices.size());
+	mesh.vertices.push_back({ { 0.0f, -hh, 0.0f }, GetNextColor(index) });
+
+	for (int s = 0; s < slices; ++s)
+	{
+		mesh.indices.push_back(bottomCenterIndex);
+		mesh.indices.push_back(s);
+		mesh.indices.push_back(s + 1);
+	}
+
 	return mesh;
 }
 
