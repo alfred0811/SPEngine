@@ -4,7 +4,7 @@
 int WINAPI WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int)
 {
 	SPEngine::AppConfig config;
-	config.appName = L"Hello Mesh Builder";
+	config.appName = L"Hello Texture";
 
 	SPEngine::App& myApp = SPEngine::MainApp();
 

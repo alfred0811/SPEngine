@@ -19,6 +19,7 @@ protected:
 	SPEngine::Graphics::MeshBuffer mMeshBuffer;
 	SPEngine::Graphics::VertexShader mVertexShader;
 	SPEngine::Graphics::PixelShader mPixelShader;
+	SPEngine::Graphics::Sampler mSampler;
 
 	SPEngine::Graphics::Camera mCamera;
 	SPEngine::Graphics::ConstantBuffer mConstantBuffer;

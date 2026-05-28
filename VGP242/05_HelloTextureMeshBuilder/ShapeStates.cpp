@@ -18,11 +18,14 @@ void ShapeStates::Initialize()
 	mPixelShader.Initialize(shaderPath);
 	mConstantBuffer.Initialize(sizeof(Math::Matrix4));
 
+	mSampler.Initialize(Sampler::Filter::Linear, Sampler::AddressMode::Wrap);
+
 	mTextureId = TextureManager::Get()->LoadTexture("skybox/skybox_texture.jpg");
 }
 void ShapeStates::Terminate()
 {
 	TextureManager::Get()->ReleaseTexture(mTextureId);
+	mSampler.Terminate();
 	mConstantBuffer.Terminate();
 	mPixelShader.Terminate();
 	mVertexShader.Terminate();
@@ -82,6 +85,7 @@ void ShapeStates::Render()
 	Math::Matrix4 wvp = matWorld * matView * matProj;
 	wvp = Math::Transpose(wvp);
 	mConstantBuffer.Update(&wvp);
+	mSampler.BindPS(0);
 
 	// assign texture
 	TextureManager::Get()->BindPS(mTextureId, 0);

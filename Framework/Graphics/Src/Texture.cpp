@@ -51,5 +51,5 @@ void Texture::BindVS(uint32_t slot) const
 void Texture::BindPS(uint32_t slot) const
 {
 	auto context = GraphicsSystem::Get()->GetContext();
-	context->VSSetShaderResources(slot, 1, &mShaderResourceView);
+	context->PSSetShaderResources(slot, 1, &mShaderResourceView);
 }
