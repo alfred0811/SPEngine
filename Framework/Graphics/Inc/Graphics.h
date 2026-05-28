@@ -10,5 +10,7 @@
 #include "MeshBuffer.h"
 #include "MeshTypes.h"
 #include "PixelShader.h"
+#include "Texture.h"
+#include "TextureManager.h"
 #include "VertexTypes.h"
 #include "VertexShader.h"

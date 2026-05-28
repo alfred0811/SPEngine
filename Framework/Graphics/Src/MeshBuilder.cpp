@@ -111,6 +111,73 @@ MeshPC MeshBuilder::CreateCubePC(float size)
 	return mesh;
 }
 
+MeshPX MeshBuilder::CreateCubePX(float size)
+{
+	MeshPX mesh;
+
+	const float hs = size * 0.5f;
+	const float ot = 1.0f / 3.0f;
+	const float tt = 2.0f / 3.0f;
+
+	// front
+	mesh.vertices.push_back({ { -hs, -hs, -hs}, {0.25f, tt} });
+	mesh.vertices.push_back({ { -hs,  hs, -hs}, {0.25f, ot} });
+	mesh.vertices.push_back({ {  hs,  hs, -hs}, {0.5f, ot} });
+
+	mesh.vertices.push_back({ { -hs, -hs, -hs}, {0.25f, tt} });
+	mesh.vertices.push_back({ {  hs,  hs, -hs}, {0.5f, ot} });
+	mesh.vertices.push_back({ {  hs, -hs, -hs}, {0.5f, tt} });
+
+	// right
+	mesh.vertices.push_back({ {  hs, -hs, -hs}, {0.5f, tt} });
+	mesh.vertices.push_back({ {  hs,  hs, -hs}, {0.5f, ot} });
+	mesh.vertices.push_back({ {  hs,  hs,  hs}, {0.75f, ot} });
+
+	mesh.vertices.push_back({ {  hs, -hs, -hs}, {0.5f, tt} });
+	mesh.vertices.push_back({ {  hs,  hs,  hs}, {0.75f, ot} });
+	mesh.vertices.push_back({ {  hs, -hs,  hs}, {0.75f, tt} });
+
+	// back
+	mesh.vertices.push_back({ {  hs, -hs,  hs}, {0.75f, tt} });
+	mesh.vertices.push_back({ {  hs,  hs,  hs}, {0.75f, ot} });
+	mesh.vertices.push_back({ { -hs,  hs,  hs}, {1.0f, ot} });
+
+	mesh.vertices.push_back({ {  hs, -hs,  hs}, {0.75f, tt} });
+	mesh.vertices.push_back({ { -hs,  hs,  hs}, {1.0f, ot} });
+	mesh.vertices.push_back({ { -hs, -hs,  hs}, {1.0f, tt} });
+
+	// left
+	mesh.vertices.push_back({ { -hs, -hs, -hs}, {0.25f, tt} });
+	mesh.vertices.push_back({ { -hs,  hs,  hs}, {0.0f, ot} });
+	mesh.vertices.push_back({ { -hs,  hs, -hs}, {0.25f, ot} });
+
+	mesh.vertices.push_back({ { -hs, -hs, -hs}, {0.25f, tt} });
+	mesh.vertices.push_back({ { -hs, -hs,  hs}, {0.0f, tt} });
+	mesh.vertices.push_back({ { -hs,  hs,  hs}, {0.0f, ot} });
+
+	// top
+	mesh.vertices.push_back({ { -hs,  hs, -hs}, {0.25f, ot} });
+	mesh.vertices.push_back({ { -hs,  hs,  hs}, {0.25f,0.0f} });
+	mesh.vertices.push_back({ {  hs,  hs,  hs}, {0.5f,0.0f} });
+
+	mesh.vertices.push_back({ { -hs,  hs, -hs}, {0.25f, ot} });
+	mesh.vertices.push_back({ {  hs,  hs,  hs}, {0.5f,0.0f} });
+	mesh.vertices.push_back({ {  hs,  hs, -hs}, {0.5f, ot} });
+
+	// bottom
+	mesh.vertices.push_back({ { -hs, -hs, -hs}, {0.25f, tt} });
+	mesh.vertices.push_back({ {  hs, -hs,  hs}, {0.5f,1.0f} });
+	mesh.vertices.push_back({ { -hs, -hs,  hs}, {0.25f,1.0f} });
+
+	mesh.vertices.push_back({ { -hs, -hs, -hs}, {0.25f, tt} });
+	mesh.vertices.push_back({ {  hs, -hs, -hs}, {0.5f, tt} });
+	mesh.vertices.push_back({ {  hs, -hs,  hs}, {0.5f,1.0f} });
+
+	// dont need indices as the vertices make up the shape
+
+	return mesh;
+}
+
 MeshPC MeshBuilder::CreateBoxPC(float width, float height, float depth)
 {
 	MeshPC mesh;
@@ -214,18 +281,18 @@ MeshPC MeshBuilder::CreateCylinderPC(int slices, int rings)
 	CreatePlaneIndices(mesh.indices, rings, slices);
 
 	// add top and bottom
-	int topCenterIndex = static_cast<int>(mesh.vertices.size());
+	uint32_t topCenterIndex = mesh.vertices.size();
 	mesh.vertices.push_back({ { 0.0f, hh, 0.0f }, GetNextColor(index) });
 
 	for (int s = 0; s < slices; ++s)
 	{
-		int topRingIndex = rings * (slices + 1);
+		uint32_t topRingIndex = rings * (slices + 1);
 		mesh.indices.push_back(topCenterIndex);
 		mesh.indices.push_back(topRingIndex + s + 1);
 		mesh.indices.push_back(topRingIndex + s);
 	}
 
-	int bottomCenterIndex = static_cast<int>(mesh.vertices.size());
+	uint32_t bottomCenterIndex = mesh.vertices.size();
 	mesh.vertices.push_back({ { 0.0f, -hh, 0.0f }, GetNextColor(index) });
 
 	for (int s = 0; s < slices; ++s)

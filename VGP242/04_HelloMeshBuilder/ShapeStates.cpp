@@ -91,5 +91,5 @@ void ShapeStates::CreateShape()
 	// mMesh = MeshBuilder::CreatePyramidPC(1.0f);
 	// mMesh = MeshBuilder::CreatePlanePC(10, 10, 1.0f);
 	mMesh = MeshBuilder::CreateCylinderPC(10, 1);
-	//mMesh = MeshBuilder::CreateSpherePC(20, 20, 1.0f);
+	// mMesh = MeshBuilder::CreateSpherePC(20, 20, 1.0f);
 }

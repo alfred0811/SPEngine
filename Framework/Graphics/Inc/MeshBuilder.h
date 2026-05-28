@@ -10,6 +10,7 @@ namespace SPEngine::Graphics
 		// cube
 		static MeshPC CreateVertexCubePC(float size, const Color& color);
 		static MeshPC CreateCubePC(float size);
+		static MeshPX CreateCubePX(float size);
 
 		// rectangle
 		static MeshPC CreateBoxPC(float width, float height, float depth);

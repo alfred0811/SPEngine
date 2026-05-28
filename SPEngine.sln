@@ -33,12 +33,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shaders", "Shaders", "{81FC
 	ProjectSection(SolutionItems) = preProject
 		Assets\Shaders\DoColor.fx = Assets\Shaders\DoColor.fx
 		Assets\Shaders\DoSomething.fx = Assets\Shaders\DoSomething.fx
+		Assets\Shaders\DoTexture.fx = Assets\Shaders\DoTexture.fx
 		Assets\Shaders\DoTransform.fx = Assets\Shaders\DoTransform.fx
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_HelloCube", "VGP242\03_HelloCube\03_HelloCube.vcxproj", "{4076ED4A-414C-4A7C-847B-5D8371B8A2EB}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_HelloMeshBuilder", "VGP242\04_HelloMeshBuilder\04_HelloMeshBuilder.vcxproj", "{011247BB-78B6-48C8-ABD9-42B4E0B18739}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_HelloTextureMeshBuilder", "VGP242\05_HelloTextureMeshBuilder\05_HelloTextureMeshBuilder.vcxproj", "{81C1DB92-DC98-46CC-955E-6AF3ADF3F51F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -128,6 +131,14 @@ Global
 		{011247BB-78B6-48C8-ABD9-42B4E0B18739}.Release|x64.Build.0 = Release|x64
 		{011247BB-78B6-48C8-ABD9-42B4E0B18739}.Release|x86.ActiveCfg = Release|Win32
 		{011247BB-78B6-48C8-ABD9-42B4E0B18739}.Release|x86.Build.0 = Release|Win32
+		{81C1DB92-DC98-46CC-955E-6AF3ADF3F51F}.Debug|x64.ActiveCfg = Debug|x64
+		{81C1DB92-DC98-46CC-955E-6AF3ADF3F51F}.Debug|x64.Build.0 = Debug|x64
+		{81C1DB92-DC98-46CC-955E-6AF3ADF3F51F}.Debug|x86.ActiveCfg = Debug|Win32
+		{81C1DB92-DC98-46CC-955E-6AF3ADF3F51F}.Debug|x86.Build.0 = Debug|Win32
+		{81C1DB92-DC98-46CC-955E-6AF3ADF3F51F}.Release|x64.ActiveCfg = Release|x64
+		{81C1DB92-DC98-46CC-955E-6AF3ADF3F51F}.Release|x64.Build.0 = Release|x64
+		{81C1DB92-DC98-46CC-955E-6AF3ADF3F51F}.Release|x86.ActiveCfg = Release|Win32
+		{81C1DB92-DC98-46CC-955E-6AF3ADF3F51F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,6 +155,7 @@ Global
 		{81FC9873-D4C2-4858-B392-A6F2F7A750CD} = {4A8F47DC-DC4D-480F-9F50-263FAB348BAA}
 		{4076ED4A-414C-4A7C-847B-5D8371B8A2EB} = {C81F10A9-69AF-4974-BFED-89278A3EC576}
 		{011247BB-78B6-48C8-ABD9-42B4E0B18739} = {C81F10A9-69AF-4974-BFED-89278A3EC576}
+		{81C1DB92-DC98-46CC-955E-6AF3ADF3F51F} = {C81F10A9-69AF-4974-BFED-89278A3EC576}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {247E1DF8-C79A-485D-88AB-56D62C0DC66C}
