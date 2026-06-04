@@ -24,6 +24,7 @@ void App::Run(const AppConfig& config)
 	InputSystem::StaticInitialize(handle);
 	GraphicsSystem::StaticInitialize(handle, config.fullScreen);
 	TextureManager::StaticInitialize(L"../../Assets/Textures");
+	DebugUI::StaticInitialize(handle, false, true);
 
 	// BG Color
 	//GraphicsSystem::Get()->SetClearColor(Colors::Peru);
@@ -66,13 +67,17 @@ void App::Run(const AppConfig& config)
 		// render flow
 		GraphicsSystem* gs = GraphicsSystem::Get();
 		gs->BeginRender();
-		mCurrentState->Render();
+			mCurrentState->Render();
+			DebugUI::BeginDraw();
+				mCurrentState->DebugUI();
+			DebugUI::EndDraw();
 		gs->EndRender();
 	}
 	// terminate active state
 	mCurrentState->Terminate();
 
 	// for all systems we build, terminate all singletons
+	DebugUI::StaticTerminate();
 	GraphicsSystem::StaticTerminate();
 	InputSystem::StaticTerminate();
 	TextureManager::StaticTerminate();

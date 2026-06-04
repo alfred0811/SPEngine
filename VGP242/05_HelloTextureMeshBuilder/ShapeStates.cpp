@@ -105,6 +105,6 @@ void ShapeStates::CreateShape()
 
 	// mMesh = MeshBuilder::CreateCubePX(1.0f);
 	// mMesh = MeshBuilder::CreatePlanePX(10, 10, 1.0f);
-	mMesh = MeshBuilder::CreateSpherePX(30, 30, 1.0f);
-	// mMesh = MeshBuilder::CreateSkySpherePX(30, 30, 100.0f);
+	// mMesh = MeshBuilder::CreateSpherePX(30, 30, 1.0f);
+	mMesh = MeshBuilder::CreateSkySpherePX(30, 30, 100.0f);
 }

@@ -1,20 +1,2 @@
-﻿  MeshBuilder.cpp
-D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\MeshBuilder.cpp(240,58): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  (compiling source file '/Src/MeshBuilder.cpp')
-  
-D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\MeshBuilder.cpp(240,18): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-  (compiling source file '/Src/MeshBuilder.cpp')
-  
-D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\MeshBuilder.cpp(267,58): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  (compiling source file '/Src/MeshBuilder.cpp')
-  
-D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\MeshBuilder.cpp(267,18): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-  (compiling source file '/Src/MeshBuilder.cpp')
-  
-D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\MeshBuilder.cpp(318,26): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-  (compiling source file '/Src/MeshBuilder.cpp')
-  
-D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\MeshBuilder.cpp(329,29): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-  (compiling source file '/Src/MeshBuilder.cpp')
-  
+﻿  DebugUI.cpp
   Graphics.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\Graphics.lib
