@@ -25,6 +25,7 @@ void App::Run(const AppConfig& config)
 	GraphicsSystem::StaticInitialize(handle, config.fullScreen);
 	TextureManager::StaticInitialize(L"../../Assets/Textures");
 	DebugUI::StaticInitialize(handle, false, true);
+	SimpleDraw::StaticInitialize(config.maxVertexCount);
 
 	// BG Color
 	//GraphicsSystem::Get()->SetClearColor(Colors::Peru);
@@ -77,6 +78,7 @@ void App::Run(const AppConfig& config)
 	mCurrentState->Terminate();
 
 	// for all systems we build, terminate all singletons
+	SimpleDraw::StaticTerminate();
 	DebugUI::StaticTerminate();
 	GraphicsSystem::StaticTerminate();
 	InputSystem::StaticTerminate();
