@@ -51,9 +51,34 @@ void GameState::Render()
 	switch (gCurrentShape)
 	{
 	case Shape::None:	break;
+	case Shape::AABB:
+	{
+		SimpleDraw::AddAABB({ 0.0f, 0.5f, 0.0f }, { 1.0f, 1.0f, 1.0f }, gShapeColor);
+	}
+	break;
+	case Shape::AABBFilled:
+	{
+		SimpleDraw::AddFilledAABB({ 0.0f, 0.5f, 0.0f }, { 1.0f, 1.0f, 1.0f }, gShapeColor);
+	}
+	break;
+	case Shape::Sphere:
+	{
+		SimpleDraw::AddSphere(32, 16, 1.0f, { 0.0f, 0.5f, 0.0f }, gShapeColor);
+	}
+	break;
 	case Shape::GroundPlane:
 	{
 		SimpleDraw::AddGroundPlane(gPlaneSize, gShapeColor);
+	}
+	break;
+	case Shape::GroundCircle:
+	{
+		SimpleDraw::AddGroundCircle(32, gPlaneSize * 0.5f, { 0.0f, 0.0f, 0.0f }, gShapeColor);
+	}
+	break;
+	case Shape::Transform:
+	{
+		SimpleDraw::AddTransform(Math::Matrix4::Translation({ 0.0f, 0.0f, 0.0f }));
 	}
 	break;
 	default:
