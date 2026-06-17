@@ -22,9 +22,18 @@ private:
 
 	// Camera
 	void UpdateCamera(float deltaTime);
+	SPEngine::Math::Vector3 GetPlanetPosition(int planetIndex) const;
+	float GetPlanetViewDistance(int planetIndex) const;
 
 	SPEngine::Graphics::Camera mCamera;
 	SPEngine::Graphics::Camera mRenderTargetCamera;
+
+	// Camera Transition
+	bool mIsTransitioning = false;
+	float mTransitionTime = 0.0f;
+	float mTransitionDuration = 2.0f;
+	SPEngine::Math::Vector3 mCameraStartPos;
+	SPEngine::Math::Vector3 mCameraTargetPos;
 	
 	// GPU
 	SPEngine::Graphics::VertexShader mVertexShader;
@@ -45,4 +54,7 @@ private:
 	Object mNeptune;
 	Object mPluto;
 	Object mMoon;
+
+	// Moon 
+	float mMoonOrbitAngle = 0.0f;
 };

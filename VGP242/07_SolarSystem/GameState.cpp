@@ -6,6 +6,7 @@ using namespace SPEngine::Input;
 
 enum class CameraTarget
 {
+	FreeCamera,
 	Sun,
 	Mercury,
 	Venus,
@@ -19,12 +20,13 @@ enum class CameraTarget
 	Moon,
 };
 
-CameraTarget gCurrentTarget = CameraTarget::Sun;
-const char* gTargetNames[] = { "Sun", "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto", "Moon" };
+CameraTarget gCurrentTarget = CameraTarget::FreeCamera;
+const char* gTargetNames[] = { "Free Camera", "Sun", "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto", "Moon" };
 
 bool gDrawOrbit = true;
 float gPlanetRotationSpeed = 0.01f;
 float gOrbitalRotationSpeed = 0.01f;
+float gCameraDistance = 3.0f;
 
 void GameState::Initialize()
 {
@@ -99,7 +101,7 @@ void GameState::Initialize()
 	mUranus.matWorld = Math::Matrix4::Translation({ 0.0f, 0.0f, 11.0f });
 	mNeptune.matWorld = Math::Matrix4::Translation({ 0.0f, 0.0f, 12.5f });
 	mPluto.matWorld = Math::Matrix4::Translation({ 0.0f, 0.0f, 14.0f });
-	mMoon.matWorld = mEarth.matWorld * Math::Matrix4::Translation({ 0.0f, 0.0f, 0.8f });
+	mMoon.matWorld = Math::Matrix4::Translation({ 0.0f, 0.0f, 0.8f });
 
 	constexpr uint32_t size = 512;
 }
@@ -142,11 +144,69 @@ void GameState::Terminate()
 	mVertexShader.Terminate();
 }
 
+Math::Vector3 GameState::GetPlanetPosition(int planetIndex) const
+{
+	switch (static_cast<CameraTarget>(planetIndex))
+	{
+	case CameraTarget::Sun:
+		return Math::GetTranslation(mSun.matWorld);
+	case CameraTarget::Mercury:
+		return Math::GetTranslation(mMercury.matWorld);
+	case CameraTarget::Venus:
+		return Math::GetTranslation(mVenus.matWorld);
+	case CameraTarget::Earth:
+		return Math::GetTranslation(mEarth.matWorld);
+	case CameraTarget::Mars:
+		return Math::GetTranslation(mMars.matWorld);
+	case CameraTarget::Jupiter:
+		return Math::GetTranslation(mJupiter.matWorld);
+	case CameraTarget::Saturn:
+		return Math::GetTranslation(mSaturn.matWorld);
+	case CameraTarget::Uranus:
+		return Math::GetTranslation(mUranus.matWorld);
+	case CameraTarget::Neptune:
+		return Math::GetTranslation(mNeptune.matWorld);
+	case CameraTarget::Pluto:
+		return Math::GetTranslation(mPluto.matWorld);
+	case CameraTarget::Moon:
+		return Math::GetTranslation(mMoon.matWorld);
+	default:
+		return Math::Vector3::Zero;
+	}
+}
+
+float GameState::GetPlanetViewDistance(int planetIndex) const
+{
+	switch (static_cast<CameraTarget>(planetIndex))
+	{
+	case CameraTarget::Sun:
+		return 3.5f;
+	case CameraTarget::Jupiter:
+		return 2.5f;
+	case CameraTarget::Saturn:
+		return 2.0f;
+	case CameraTarget::Neptune:
+		return 1.5f;
+	case CameraTarget::Venus:
+	case CameraTarget::Earth:
+		return 1.5f;
+	case CameraTarget::Mars:
+	case CameraTarget::Uranus:
+		return 1.2f;
+	case CameraTarget::Mercury:
+	case CameraTarget::Moon:
+	case CameraTarget::Pluto:
+		return 0.8f;
+	default:
+		return 3.0f;
+	}
+}
+
 void GameState::Update(float deltaTime)
 {
 	UpdateCamera(deltaTime);
 
-	// Orbit circles
+	// Orbit circles ===============================================================
 	if (gDrawOrbit)
 	{
 		SimpleDraw::AddGroundCircle(60, 2.0f, Math::Vector3::Zero, Colors::White);
@@ -159,8 +219,10 @@ void GameState::Update(float deltaTime)
 		SimpleDraw::AddGroundCircle(60, 12.5f, Math::Vector3::Zero, Colors::White);
 		SimpleDraw::AddGroundCircle(60, 14.0f, Math::Vector3::Zero, Colors::White);
 	}
+	// ==========================================================================
 
-	// local rotation
+
+	// local rotation ===============================================================
 	mSun.matWorld = Math::Matrix4::RotationY((0.005f + gPlanetRotationSpeed) * deltaTime) * mSun.matWorld;
 	mMercury.matWorld = Math::Matrix4::RotationY((0.1f + gPlanetRotationSpeed) * deltaTime) * mMercury.matWorld;
 	mVenus.matWorld = Math::Matrix4::RotationY((0.05f + gPlanetRotationSpeed) * deltaTime) * mVenus.matWorld;
@@ -171,9 +233,10 @@ void GameState::Update(float deltaTime)
 	mUranus.matWorld = Math::Matrix4::RotationY((0.1f + gPlanetRotationSpeed) * deltaTime) * mUranus.matWorld;
 	mNeptune.matWorld = Math::Matrix4::RotationY((0.05f + gPlanetRotationSpeed) * deltaTime) * mNeptune.matWorld;
 	mPluto.matWorld = Math::Matrix4::RotationY((0.008f + gPlanetRotationSpeed) * deltaTime) * mPluto.matWorld;
-	mMoon.matWorld = Math::Matrix4::RotationY((0.02355f + gPlanetRotationSpeed) * deltaTime) * mMoon.matWorld;
+	// ==========================================================================
 
-	// rotate around the sun
+
+	// rotate around the sun ===============================================================
 	mMercury.matWorld = mMercury.matWorld * Math::Matrix4::RotationY((0.4787f + gOrbitalRotationSpeed) * deltaTime);
 	mVenus.matWorld = mVenus.matWorld * Math::Matrix4::RotationY((0.3502f + gOrbitalRotationSpeed) * deltaTime);
 	mEarth.matWorld = mEarth.matWorld * Math::Matrix4::RotationY((0.2978f + gOrbitalRotationSpeed) * deltaTime);
@@ -183,47 +246,61 @@ void GameState::Update(float deltaTime)
 	mUranus.matWorld = mUranus.matWorld * Math::Matrix4::RotationY((0.0681f + gOrbitalRotationSpeed) * deltaTime);
 	mNeptune.matWorld = mNeptune.matWorld * Math::Matrix4::RotationY((0.0543f + gOrbitalRotationSpeed) * deltaTime);
 	mPluto.matWorld = mPluto.matWorld * Math::Matrix4::RotationY((0.0474f + gOrbitalRotationSpeed) * deltaTime);
-	mMoon.matWorld = Math::Matrix4::RotationY((0.0103f + gOrbitalRotationSpeed) * deltaTime) * Math::Matrix4::Translation({ 0.0f, 0.0f, 0.8f }) * mEarth.matWorld;
+	
+	// Moon Rotation around the Earth ========================================================
+	mMoonOrbitAngle += (0.0103f + gOrbitalRotationSpeed) * deltaTime;
+	mMoonOrbitAngle += (0.0103f + gOrbitalRotationSpeed) * deltaTime;
 
-	Math::Vector3 targetPosition = Math::Vector3::Zero;
-	switch (gCurrentTarget)
+	Math::Vector3 earthPos = Math::GetTranslation(mEarth.matWorld);
+	Math::Matrix4 moonOrbit = Math::Matrix4::RotationY(mMoonOrbitAngle);
+	Math::Matrix4 moonOffset = Math::Matrix4::Translation({ 0.0f, 0.0f, 0.8f });
+
+	mMoon.matWorld = moonOffset * moonOrbit * Math::Matrix4::Translation(earthPos);
+	// =======================================================================================
+
+	// Camera transition logic ===============================================================
+	if (mIsTransitioning)
 	{
-	case CameraTarget::Sun:
-		targetPosition = Math::GetTranslation(mSun.matWorld);
-		break;
-	case CameraTarget::Mercury:
-		targetPosition = Math::GetTranslation(mMercury.matWorld);
-		break;
-	case CameraTarget::Venus:
-		targetPosition = Math::GetTranslation(mVenus.matWorld);
-		break;
-	case CameraTarget::Earth:
-		targetPosition = Math::GetTranslation(mEarth.matWorld);
-		break;
-	case CameraTarget::Mars:
-		targetPosition = Math::GetTranslation(mMars.matWorld);
-		break;
-	case CameraTarget::Jupiter:
-		targetPosition = Math::GetTranslation(mJupiter.matWorld);
-		break;
-	case CameraTarget::Saturn:
-		targetPosition = Math::GetTranslation(mSaturn.matWorld);
-		break;
-	case CameraTarget::Uranus:
-		targetPosition = Math::GetTranslation(mUranus.matWorld);
-		break;
-	case CameraTarget::Neptune:
-		targetPosition = Math::GetTranslation(mNeptune.matWorld);
-		break;
-	case CameraTarget::Pluto:
-		targetPosition = Math::GetTranslation(mPluto.matWorld);
-		break;
-	case CameraTarget::Moon:
-		targetPosition = Math::GetTranslation(mMoon.matWorld);
-		break;
-	}
+		mTransitionTime += deltaTime;
+		float t = Math::Min(mTransitionTime / mTransitionDuration, 1.0f);
 
-	mRenderTargetCamera.SetLookAt(targetPosition);
+		// Smooth interpolation (ease in-out)
+		t = t * t * (3.0f - 2.0f * t);
+
+		Math::Vector3 newPosition = Math::Lerp(mCameraStartPos, mCameraTargetPos, t);
+		mCamera.SetPosition(newPosition);
+
+		if (t >= 1.0f)
+		{
+			mIsTransitioning = false;
+		}
+	}
+	// ==========================================================================
+
+	// Camera following logic ===============================================================
+	if (gCurrentTarget != CameraTarget::FreeCamera)
+	{
+		Math::Vector3 targetPosition = GetPlanetPosition(static_cast<int>(gCurrentTarget));
+		mRenderTargetCamera.SetLookAt(targetPosition);
+		mCamera.SetLookAt(targetPosition);
+
+		// Update camera position to maintain distance while following
+		if (!mIsTransitioning)
+		{
+			Math::Vector3 cameraPos = mCamera.GetPosition();
+			Math::Vector3 directionToPlanet = Math::Normalize(targetPosition - cameraPos);
+			float currentDistance = Math::Distance(cameraPos, targetPosition);
+			float desiredDistance = GetPlanetViewDistance(static_cast<int>(gCurrentTarget));
+			float maxDistance = desiredDistance * 3.0f; // Allow moving back up to 3x the default distance
+
+			// Only push camera back if it exceeds the maximum distance
+			if (currentDistance > maxDistance)
+			{
+				Math::Vector3 desiredPosition = targetPosition - directionToPlanet * maxDistance;
+				mCamera.SetPosition(Math::Lerp(cameraPos, desiredPosition, deltaTime * 2.0f));
+			}
+		}
+	}
 }
 
 void GameState::Render()
@@ -332,7 +409,14 @@ void GameState::Render()
 void GameState::DebugUI()
 {
 	ImGui::Begin("Debug", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
-	// CONTENT GOES BETWEEN BEGIN AND END
+
+	// Planet Selection
+	ImGui::Text("Camera Target");
+	int currentTarget = static_cast<int>(gCurrentTarget);
+	if (ImGui::Combo("##CameraTarget", &currentTarget, gTargetNames, IM_ARRAYSIZE(gTargetNames)))
+	{
+		gCurrentTarget = static_cast<CameraTarget>(currentTarget);
+	}
 	
 	ImGui::End();
 }
