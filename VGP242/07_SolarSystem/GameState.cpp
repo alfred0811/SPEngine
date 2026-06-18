@@ -246,6 +246,7 @@ void GameState::Update(float deltaTime)
 	mUranus.matWorld = mUranus.matWorld * Math::Matrix4::RotationY((0.0681f + gOrbitalRotationSpeed) * deltaTime);
 	mNeptune.matWorld = mNeptune.matWorld * Math::Matrix4::RotationY((0.0543f + gOrbitalRotationSpeed) * deltaTime);
 	mPluto.matWorld = mPluto.matWorld * Math::Matrix4::RotationY((0.0474f + gOrbitalRotationSpeed) * deltaTime);
+	// =======================================================================================
 	
 	// Moon Rotation around the Earth ========================================================
 	mMoonOrbitAngle += (0.0103f + gOrbitalRotationSpeed) * deltaTime;
@@ -301,12 +302,12 @@ void GameState::Update(float deltaTime)
 			}
 		}
 	}
+	// =======================================================================================
 }
 
 void GameState::Render()
 {
-	// ===============================================================
-	// prepare the GPU
+	// prepare the GPU ===============================================================
 	mVertexShader.Bind();
 	mPixelShader.Bind();
 
@@ -418,6 +419,21 @@ void GameState::DebugUI()
 		gCurrentTarget = static_cast<CameraTarget>(currentTarget);
 	}
 	
+	ImGui::Separator();
+
+	// Orbit Toggle
+	ImGui::Checkbox("Draw Orbits", &gDrawOrbit);
+
+	ImGui::Separator();
+
+	// Rotation Speed
+	ImGui::SliderFloat("Orbital Rotation Speed", &gOrbitalRotationSpeed, 0.0f, 1.0f);
+	// Reset button for orbital rotation speed
+	if (ImGui::Button("Reset Orbital Rotation Speed"))
+	{
+		gOrbitalRotationSpeed = 0.01f;
+	}
+
 	ImGui::End();
 }
 
