@@ -60,6 +60,12 @@ void StandardEffect::Render(const RenderObject& renderObject)
 	mLightBuffer.Update(*mDirectionalLight);
 	mMaterialBuffer.Update(renderObject.material);
 
+	TextureManager* tm = TextureManager::Get();
+	tm->BindPS(renderObject.diffuseMapId, 0);
+	tm->BindPS(renderObject.specMapId, 1);
+	tm->BindPS(renderObject.normMapId, 2);
+	tm->BindVS(renderObject.bumpMapId, 3);
+
 	renderObject.meshBuffer.Render();
 }
 

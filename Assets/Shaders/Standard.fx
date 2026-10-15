@@ -26,6 +26,11 @@ cbuffer MaterialBuffer : register(b2)
 
 SamplerState textureSampler : register(s0);
 
+Texture2D diffuseMap : register(t0);
+Texture2D specMap : register(t1);
+Texture2D normMap : register(t2);
+Texture2D bumpMap : register(t3);
+
 struct VS_INPUT
 {
     float3 position : POSITION;
@@ -81,7 +86,8 @@ float4 PS(VS_OUTPUT input) : SV_Target
     float s = pow(base, materialShininess);
     float4 specular = s * lightSpecular * materialSpecular;
     
-    float4 diffuseColor = float4(1.0f, 1.0f, 1.0f, 1.0f);
-    float4 finalColor = (emissive + ambient + diffuse) + diffuseColor + (specular);
+    float4 diffuseColor = diffuseMap.Sample(textureSampler, input.texCoord);
+    float4 specularColor = specMap.Sample(textureSampler, input.texCoord).r;
+    float4 finalColor = (emissive + ambient + diffuse) * diffuseColor + (specular * specularColor);
     return finalColor;
 }

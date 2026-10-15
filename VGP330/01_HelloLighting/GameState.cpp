@@ -6,7 +6,7 @@ using namespace SPEngine::Input;
 
 void GameState::Initialize()
 {
-	mCamera.SetPosition({ 0.0f, 1.0f, -30.0f });
+	mCamera.SetPosition({ 0.0f, 1.0f, -3.0f });
 	mCamera.SetLookAt({ 0.0f, 0.0f, 0.0f });
 
 	mDirectionalLight.direction = Math::Normalize({ 1.0f, -1.0f, 1.0f });
@@ -18,6 +18,11 @@ void GameState::Initialize()
 	// set up render object
 	Mesh mesh = MeshBuilder::CreateSphere(30, 30, 1.0f);
 	mRenderObject.meshBuffer.Initialize(mesh);
+	TextureManager* tm = TextureManager::Get();
+	mRenderObject.diffuseMapId = tm->LoadTexture("earth.jpg");
+	mRenderObject.specMapId = tm->LoadTexture("earth_spec.jpg");
+	mRenderObject.normMapId = tm->LoadTexture("earth_normal.jpg");
+	mRenderObject.bumpMapId = tm->LoadTexture("earth_bump.jpg");
 
 	// set up the effect
 	std::filesystem::path shaderPath = L"../../Assets/Shaders/Standard.fx";
@@ -46,6 +51,26 @@ void GameState::Render()
 void GameState::DebugUI()
 {
 	ImGui::Begin("Debug", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
+	if (ImGui::CollapsingHeader("Light", ImGuiTreeNodeFlags_DefaultOpen))
+	{
+		if (ImGui::DragFloat3("Direction", &mDirectionalLight.direction.x, 0.1f))
+		{
+			mDirectionalLight.direction = Math::Normalize(mDirectionalLight.direction);
+		}
+		ImGui::ColorEdit4("Ambient##Light", &mDirectionalLight.ambient.r);
+		ImGui::ColorEdit4("Diffuse##Light", &mDirectionalLight.diffuse.r);
+		ImGui::ColorEdit4("Specular##Light", &mDirectionalLight.specular.r);
+	}
+	if (ImGui::CollapsingHeader("Material", ImGuiTreeNodeFlags_DefaultOpen))
+	{
+		ImGui::ColorEdit4("Emissive##Material", &mRenderObject.material.emissive.r);
+		ImGui::ColorEdit4("Ambient##Material", &mRenderObject.material.ambient.r);
+		ImGui::ColorEdit4("Diffuse##Material", &mRenderObject.material.diffuse.r);
+		ImGui::ColorEdit4("Specular##Material", &mRenderObject.material.specular.r);
+		ImGui::DragFloat("Shininess##Material", &mRenderObject.material.shininess, 0.01f, 0.0f, 1000.0f);
+	}
+	
+	mStandardEffect.DebugUI();
 	ImGui::End();
 }
 void GameState::UpdateCamera(float deltaTime)
