@@ -13,6 +13,7 @@ void StandardEffect::Initialize(const std::filesystem::path& shaderPath)
 	mTransformBuffer.Initialize();
 	mLightBuffer.Initialize();
 	mMaterialBuffer.Initialize();
+	mSettingsBuffer.Initialize();
 
 	// other rendering components
 	mVertexShader.Initialize<Vertex>(shaderPath);
@@ -23,6 +24,8 @@ void StandardEffect::Terminate()
 {
 	mSampler.Terminate();
 	mPixelShader.Terminate();
+	mVertexShader.Terminate();
+	mSettingsBuffer.Terminate();
 	mMaterialBuffer.Terminate();
 	mLightBuffer.Terminate();
 	mTransformBuffer.Terminate();
@@ -39,6 +42,8 @@ void StandardEffect::Begin()
 	mLightBuffer.BindVS(1);
 	mLightBuffer.BindPS(1);
 	mMaterialBuffer.BindPS(2);
+	mSettingsBuffer.BindVS(3);
+	mSettingsBuffer.BindPS(3);
 }
 void StandardEffect::End()
 {
@@ -60,6 +65,14 @@ void StandardEffect::Render(const RenderObject& renderObject)
 	mLightBuffer.Update(*mDirectionalLight);
 	mMaterialBuffer.Update(renderObject.material);
 
+	SettingsData settings;
+	settings.useDiffuseMap = (mSettingsData.useDiffuseMap > 0 && renderObject.diffuseMapId > 0) ? 1 : 0;
+	settings.useSpecMap = (mSettingsData.useSpecMap > 0 && renderObject.specMapId > 0) ? 1 : 0;
+	settings.useNormMap = (mSettingsData.useNormMap > 0 && renderObject.normMapId > 0) ? 1 : 0;
+	settings.useBumpMap = (mSettingsData.useBumpMap > 0 && renderObject.bumpMapId > 0) ? 1 : 0;
+	settings.bumpWeight = mSettingsData.bumpWeight;
+	mSettingsBuffer.Update(settings);
+
 	TextureManager* tm = TextureManager::Get();
 	tm->BindPS(renderObject.diffuseMapId, 0);
 	tm->BindPS(renderObject.specMapId, 1);
@@ -73,7 +86,27 @@ void StandardEffect::DebugUI()
 {
 	if (ImGui::CollapsingHeader("Standard Effect", ImGuiTreeNodeFlags_DefaultOpen))
 	{
-
+		bool useDiffuse = mSettingsData.useDiffuseMap > 0;
+		if (ImGui::Checkbox("UseDiffuse", &useDiffuse))
+		{
+			mSettingsData.useDiffuseMap = useDiffuse ? 1 : 0;
+		}
+		bool useSpec = mSettingsData.useSpecMap > 0;
+		if (ImGui::Checkbox("UseSpec", &useSpec))
+		{
+			mSettingsData.useSpecMap = useSpec ? 1 : 0;
+		}
+		bool useNorm = mSettingsData.useNormMap > 0;
+		if (ImGui::Checkbox("UseNorm", &useNorm))
+		{
+			mSettingsData.useNormMap = useNorm ? 1 : 0;
+		}
+		bool useBump = mSettingsData.useBumpMap > 0;
+		if (ImGui::Checkbox("UseBump", &useBump))
+		{
+			mSettingsData.useBumpMap = useBump ? 1 : 0;
+		}
+		ImGui::DragFloat("Bump Weight", &mSettingsData.bumpWeight, 0.01f, 0.0f, 100.0f);
 	}
 }
 
