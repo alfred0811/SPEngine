@@ -1,4 +1,4 @@
-// Description: Standard Effect for basic lighting, texturing, and shading
+// Description: Cel shader that references Standard.fx to reuse StandardEffect.h
 
 cbuffer TransformBuffer : register(b0)
 {
@@ -47,6 +47,7 @@ struct VS_INPUT
     float3 tangent : TANGENT;
     float2 texCoord : TEXCOORD;
 };
+// The above MUST match StandardEffect.h, otherwise the shader will not work correctly.
 
 struct VS_OUTPUT
 {
@@ -97,20 +98,27 @@ float4 PS(VS_OUTPUT input) : SV_Target
         n = normalize(mul(unpackedNormMap, tbnw));
     }
     
+    // edge thickness
+    float edgeThickness = 0.05f;
+    float e = 1.0f - saturate(dot(view, n));
+    e = smoothstep(edgeThickness - 0.1f, edgeThickness + 0.1f, e);
+    
     // emissive
-    float4 emissive = materialEmissive;
+    float4 emissive = e * materialEmissive;
     
     // ambient
     float4 ambient = lightAmbient * materialAmbient;
     
     // diffuse
     float d = saturate(dot(light, n));
+    d = smoothstep(0.005f, 0.1f, d);
     float4 diffuse = d * lightDiffuse * materialDiffuse;
     
     // specular
     float3 r = reflect(-light, n);
     float base = saturate(dot(r, view));
     float s = pow(base, materialShininess);
+    s = smoothstep(0.0005f, 0.1f, s);
     float4 specular = s * lightSpecular * materialSpecular;
     
     float4 diffuseColor = (useDiffuseMap) ? diffuseMap.Sample(textureSampler, input.texCoord) : 1.0f;

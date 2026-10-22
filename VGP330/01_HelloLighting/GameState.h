@@ -19,6 +19,8 @@ private:
 	SPEngine::Graphics::Camera mCamera;
 	SPEngine::Graphics::DirectionalLight mDirectionalLight;
 	SPEngine::Graphics::StandardEffect mStandardEffect;
+	SPEngine::Graphics::StandardEffect mStandardEffectCel;
 
 	SPEngine::Graphics::RenderObject mRenderObject;
+	bool mUseCellShading = false;
 };

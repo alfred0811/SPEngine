@@ -14,6 +14,7 @@
 #include "MeshTypes.h"
 #include "PixelShader.h"
 #include "RenderObject.h"
+#include "RenderTarget.h"
 #include "Sampler.h"
 #include "SimpleDraw.h"
 #include "StandardEffect.h"
