@@ -20,6 +20,7 @@ private:
 	SPEngine::Graphics::DirectionalLight mDirectionalLight;
 	SPEngine::Graphics::StandardEffect mStandardEffect;
 	SPEngine::Graphics::StandardEffect mStandardEffectCel;
+	SPEngine::Graphics::RenderTarget mRenderTarget;
 
 	SPEngine::Graphics::RenderObject mRenderObject;
 	bool mUseCellShading = false;

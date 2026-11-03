@@ -1,5 +1,56 @@
-﻿  RenderTarget.cpp
-D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\RenderTarget.cpp(100,77): warning C4244: 'argument': conversion from 'float' to 'UINT8', possible loss of data
-  (compiling source file '/Src/RenderTarget.cpp')
+﻿  ModelIO.cpp
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(156,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 1 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
   
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(156,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 2 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(156,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 3 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(156,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 4 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(157,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 1 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(157,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 2 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(157,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 3 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(157,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 4 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(158,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 1 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(158,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 2 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(158,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 3 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(158,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 4 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(159,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 1 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(159,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 2 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(159,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 3 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(159,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 4 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp(160,18): warning C4477: 'fscanf_s' : format string '%f' requires an argument of type 'float *', but variadic argument 1 has type 'const float *'
+  (compiling source file '/Src/ModelIO.cpp')
+  
+  ModelManager.cpp
+  RenderObject.cpp
+  Generating Code...
   Graphics.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\Graphics.lib

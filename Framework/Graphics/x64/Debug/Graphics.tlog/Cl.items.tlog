@@ -4,6 +4,8 @@ D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\De
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\GraphicsSystem.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\GraphicsSystem.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\MeshBuffer.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\MeshBuffer.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\MeshBuilder.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\MeshBuilder.obj
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelIO.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\ModelIO.obj
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ModelManager.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\ModelManager.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\PixelShader.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\PixelShader.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\Precompiled.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\Precompiled.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\RenderObject.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\RenderObject.obj
