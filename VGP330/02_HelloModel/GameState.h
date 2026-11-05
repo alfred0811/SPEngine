@@ -21,4 +21,6 @@ private:
 	SPEngine::Graphics::StandardEffect mStandardEffect;
 
 	SPEngine::Graphics::RenderGroup mCharacter;
+	SPEngine::Graphics::RenderGroup mCharacter2;
+	SPEngine::Graphics::RenderGroup mCharacter3;
 };

@@ -1,5 +1,6 @@
 ﻿  main.cpp
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Tools\ModelImporter\main.cpp(35,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Tools\ModelImporter\main.cpp(113,4): warning C4018: '<': signed/unsigned mismatch
   ModelImporter.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\ModelImporter.exe
   D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\External\assimp-5.2.5\bin\assimp-vc143-mt.dll
   D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\External\assimp-5.2.5\bin\assimp-vc143-mtd.dll

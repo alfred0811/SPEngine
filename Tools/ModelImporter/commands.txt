@@ -1,1 +1,5 @@
 -scale 0.01 ../../Assets/Models/Character01/Capoeira.fbx ../../Assets/Models/Character01/Capoeira.model
+
+-scale 0.01 ../../Assets/Models/Character02/Ch14_nonPBR.fbx ../../Assets/Models/Character02/Ch14_nonPBR.model
+
+-scale 0.01 ../../Assets/Models/Character03/Big_Vegas.fbx ../../Assets/Models/Character03/Big_Vegas.model

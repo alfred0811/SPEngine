@@ -31,7 +31,7 @@ void RenderGroup::Initialize(const Model& model)
 			{
 				return 0;
 			}
-			return TextureManager::Get()->LoadTexture(textureName);
+			return TextureManager::Get()->LoadTexture(textureName, false);
 		};
 
 	for (const Model::MeshData& meshData : model.meshData)

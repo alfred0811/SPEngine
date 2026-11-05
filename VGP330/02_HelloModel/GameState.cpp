@@ -19,6 +19,13 @@ void GameState::Initialize()
 
 	// set up render object
 	mCharacter.Initialize(L"Character01/Capoeira.model");
+	mCharacter.transform.position = { 0.0f, 0.0f, 0.0f };
+
+	mCharacter2.Initialize(L"Character02/Ch14_nonPBR.model");
+	mCharacter2.transform.position = { -2.0f, 0.0f, 0.0f };
+
+	mCharacter3.Initialize(L"Character03/Big_Vegas.model");
+	mCharacter3.transform.position = { 2.0f, 0.0f, 0.0f };
 
 	// set up the effect
 	std::filesystem::path shaderPath = L"../../Assets/Shaders/Standard.fx";
@@ -29,6 +36,8 @@ void GameState::Initialize()
 void GameState::Terminate()
 {
 	mCharacter.Terminate();
+	mCharacter2.Terminate();
+	mCharacter3.Terminate();
 	mStandardEffect.Terminate();
 }
 void GameState::Update(float deltaTime)
@@ -43,6 +52,8 @@ void GameState::Render()
 	// render target render
 		mStandardEffect.Begin();
 			mStandardEffect.Render(mCharacter);
+			mStandardEffect.Render(mCharacter2);
+			mStandardEffect.Render(mCharacter3);
 		mStandardEffect.End();
 }
 void GameState::DebugUI()

@@ -70,7 +70,7 @@ void ExportEmbeddedTexture(const aiTexture* texture, const Arguments& args, cons
 	printf("Extracting embedded texture %s\n", fileName.u8string().c_str());
 
 	std::string fullFileName = args.outputFileName.u8string();
-	fullFileName = fullFileName.substr(0, fullFileName.find('/') + 1);
+	fullFileName = fullFileName.substr(0, fullFileName.rfind('/') + 1);
 	fullFileName += fileName.filename().u8string();
 
 	FILE* file = nullptr;
