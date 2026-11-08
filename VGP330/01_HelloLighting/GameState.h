@@ -22,6 +22,8 @@ private:
 	SPEngine::Graphics::StandardEffect mStandardEffectCel;
 	SPEngine::Graphics::RenderTarget mRenderTarget;
 
-	SPEngine::Graphics::RenderObject mRenderObject;
+	SPEngine::Graphics::RenderObject mEarthRenderObject;
+	SPEngine::Graphics::RenderObject mBrickRenderObject;
+	SPEngine::Graphics::RenderObject mMudRenderObject;
 	bool mUseCellShading = false;
 };

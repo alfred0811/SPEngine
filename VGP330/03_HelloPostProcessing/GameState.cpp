@@ -27,14 +27,39 @@ void GameState::Initialize()
 	mCharacter3.Initialize(L"Character03/Big_Vegas.model");
 	mCharacter3.transform.position = { 2.0f, 0.0f, 0.0f };
 
+	Mesh goundMesh = MeshBuilder::CreatePlane(10, 10, 1.0f);
+	mGround.meshBuffer.Initialize(goundMesh);
+	mGround.diffuseMapId = TextureManager::Get()->LoadTexture("misc/concrete.jpg");
+
 	// set up the effect
 	std::filesystem::path shaderPath = L"../../Assets/Shaders/Standard.fx";
 	mStandardEffect.Initialize(shaderPath);
 	mStandardEffect.SetCamera(mCamera);
 	mStandardEffect.SetDirectionalLight(mDirectionalLight);
+
+	// set up the post processing effect items
+	shaderPath = L"../../Assets/Shaders/PostProcessing.fx";
+	mPostProcessingEffect.Initialize(shaderPath);
+	mPostProcessingEffect.SetTexture(&mRenderTarget, 0);
+	mPostProcessingEffect.SetTexture(&mCombineTexture, 1);
+
+	MeshPX screenQuad = MeshBuilder::CreateScreenQuadPX();
+	mScreenQuad.meshBuffer.Initialize(screenQuad);
+
+	GraphicsSystem* gs = GraphicsSystem::Get();
+	const uint32_t screenWidth = gs->GetBackBufferWidth();
+	const uint32_t screenHeight = gs->GetBackBufferHeight();
+	mRenderTarget.Initialize(screenWidth, screenHeight, RenderTarget::Format::RGBA_U8);
+
+	mCombineTexture.Initialize(L"../../Assets/Textures/BloodyScreenEffects/Effect_6.png");
 }
 void GameState::Terminate()
 {
+	mCombineTexture.Terminate();
+	mScreenQuad.Terminate();
+	mRenderTarget.Terminate();
+	mPostProcessingEffect.Terminate();
+	mGround.Terminate();
 	mCharacter.Terminate();
 	mCharacter2.Terminate();
 	mCharacter3.Terminate();
@@ -51,10 +76,14 @@ void GameState::Render()
 
 	// render target render
 		mStandardEffect.Begin();
-			mStandardEffect.Render(mCharacter);
-			mStandardEffect.Render(mCharacter2);
-			mStandardEffect.Render(mCharacter3);
-		mStandardEffect.End();
+				mStandardEffect.Render(mCharacter);
+				mStandardEffect.Render(mCharacter2);
+				mStandardEffect.Render(mCharacter3);
+				mStandardEffect.Render(mGround);
+			mStandardEffect.End();
+		mRenderTarget.EndRender();
+
+		mPostProcessingEffect.Begin();
 }
 void GameState::DebugUI()
 {
@@ -69,7 +98,17 @@ void GameState::DebugUI()
 		ImGui::ColorEdit4("Diffuse##Light", &mDirectionalLight.diffuse.r);
 		ImGui::ColorEdit4("Specular##Light", &mDirectionalLight.specular.r);
 	}
+
+	ImGui::Image(
+		mRenderTarget.GetRawData(),
+		{ 128, 128 },
+		{ 0, 0 },
+		{ 1, 1 },
+		{1, 1, 1, 1 },
+		{1, 1, 1, 1 });
 	
+	mStandardEffect.DebugUI();
+	mPostProcessingEffect.DebugUI();
 	ImGui::End();
 }
 void GameState::UpdateCamera(float deltaTime)

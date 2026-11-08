@@ -1,4 +1,4 @@
--scale 0.01 ../../Assets/Models/Character01/Capoeira.fbx ../../Assets/Models/Character01/Capoeira.model
+-scale 0.01 ../../Assets/Models/Character01/Ty.fbx ../../Assets/Models/Character01/Ty.model
 
 -scale 0.01 ../../Assets/Models/Character02/Ch14_nonPBR.fbx ../../Assets/Models/Character02/Ch14_nonPBR.model
 

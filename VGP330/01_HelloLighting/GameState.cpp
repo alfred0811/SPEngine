@@ -17,24 +17,29 @@ void GameState::Initialize()
 
 	// set up render object
 	Mesh mesh = MeshBuilder::CreateSphere(30, 30, 1.0f);
-	mRenderObject.meshBuffer.Initialize(mesh);
 	TextureManager* tm = TextureManager::Get();
 
-	// Earth textures
-	/*mRenderObject.diffuseMapId = tm->LoadTexture("earth.jpg");
-	mRenderObject.specMapId = tm->LoadTexture("earth_spec.jpg");
-	mRenderObject.normMapId = tm->LoadTexture("earth_normal.jpg");
-	mRenderObject.bumpMapId = tm->LoadTexture("earth_bump.jpg");*/
+	// Earth sphere
+	mEarthRenderObject.meshBuffer.Initialize(mesh);
+	mEarthRenderObject.transform.position = { -2.5f, 1.0f, 0.0f };
+	mEarthRenderObject.diffuseMapId = tm->LoadTexture("earth.jpg");
+	mEarthRenderObject.specMapId = tm->LoadTexture("earth_spec.jpg");
+	mEarthRenderObject.normMapId = tm->LoadTexture("earth_normal.jpg");
+	mEarthRenderObject.bumpMapId = tm->LoadTexture("earth_bump.jpg");
 
-	// Brick wall textures
-	// mRenderObject.diffuseMapId = tm->LoadTexture("broken_brick_wall_diff.jpg");
-	// mRenderObject.normMapId = tm->LoadTexture("broken_brick_wall_norm.png");
+	// Brick wall sphere
+	mBrickRenderObject.meshBuffer.Initialize(mesh);
+	mBrickRenderObject.transform.position = { 0.0f, 1.0f, 0.0f };
+	mBrickRenderObject.diffuseMapId = tm->LoadTexture("broken_brick_wall_diff.jpg");
+	mBrickRenderObject.normMapId = tm->LoadTexture("broken_brick_wall_norm.png");
 
-	// brown mud dry texture
-	mRenderObject.diffuseMapId = tm->LoadTexture("brown_mud_dry_diff.jpg");
-	mRenderObject.normMapId = tm->LoadTexture("brown_mud_dry_norm.png");
-	mRenderObject.bumpMapId = tm->LoadTexture("brown_mud_dry_bump.jpg");
-	
+	// brown mud dry sphere
+	mMudRenderObject.meshBuffer.Initialize(mesh);
+	mMudRenderObject.transform.position = { 2.5f, 1.0f, 0.0f };
+	mMudRenderObject.diffuseMapId = tm->LoadTexture("brown_mud_dry_diff.jpg");
+	mMudRenderObject.normMapId = tm->LoadTexture("brown_mud_dry_norm.png");
+	mMudRenderObject.bumpMapId = tm->LoadTexture("brown_mud_dry_bump.jpg");
+
 
 	// set up the effect
 	std::filesystem::path shaderPath = L"../../Assets/Shaders/Standard.fx";
@@ -57,7 +62,9 @@ void GameState::Terminate()
 	mRenderTarget.Terminate();
 	mStandardEffect.Terminate();
 	mStandardEffectCel.Terminate();
-	mRenderObject.Terminate();
+	mEarthRenderObject.Terminate();
+	mBrickRenderObject.Terminate();
+	mMudRenderObject.Terminate();
 }
 void GameState::Update(float deltaTime)
 {
@@ -71,20 +78,26 @@ void GameState::Render()
 	if (mUseCellShading)
 	{
 		mStandardEffectCel.Begin();
-		    mStandardEffectCel.Render(mRenderObject);
+			mStandardEffectCel.Render(mEarthRenderObject);
+			mStandardEffectCel.Render(mBrickRenderObject);
+			mStandardEffectCel.Render(mMudRenderObject);
 		mStandardEffectCel.End();
 	}
 	else
 	{
 		mStandardEffect.Begin();
-		    mStandardEffect.Render(mRenderObject);
+			mStandardEffect.Render(mEarthRenderObject);
+			mStandardEffect.Render(mBrickRenderObject);
+			mStandardEffect.Render(mMudRenderObject);
 		mStandardEffect.End();
 	}
 
 	// render target render
 	mRenderTarget.BeginRender(); // tell gpu to render here
 		mStandardEffect.Begin();
-			mStandardEffect.Render(mRenderObject);
+			mStandardEffect.Render(mEarthRenderObject);
+			mStandardEffect.Render(mBrickRenderObject);
+			mStandardEffect.Render(mMudRenderObject);
 		mStandardEffect.End();
 	mRenderTarget.EndRender(); // tell gpu to render to window again
 }
@@ -101,13 +114,29 @@ void GameState::DebugUI()
 		ImGui::ColorEdit4("Diffuse##Light", &mDirectionalLight.diffuse.r);
 		ImGui::ColorEdit4("Specular##Light", &mDirectionalLight.specular.r);
 	}
-	if (ImGui::CollapsingHeader("Material", ImGuiTreeNodeFlags_DefaultOpen))
+	if (ImGui::CollapsingHeader("Earth Material", ImGuiTreeNodeFlags_DefaultOpen))
 	{
-		ImGui::ColorEdit4("Emissive##Material", &mRenderObject.material.emissive.r);
-		ImGui::ColorEdit4("Ambient##Material", &mRenderObject.material.ambient.r);
-		ImGui::ColorEdit4("Diffuse##Material", &mRenderObject.material.diffuse.r);
-		ImGui::ColorEdit4("Specular##Material", &mRenderObject.material.specular.r);
-		ImGui::DragFloat("Shininess##Material", &mRenderObject.material.shininess, 0.01f, 0.0f, 1000.0f);
+		ImGui::ColorEdit4("Emissive##EarthMaterial", &mEarthRenderObject.material.emissive.r);
+		ImGui::ColorEdit4("Ambient##EarthMaterial", &mEarthRenderObject.material.ambient.r);
+		ImGui::ColorEdit4("Diffuse##EarthMaterial", &mEarthRenderObject.material.diffuse.r);
+		ImGui::ColorEdit4("Specular##EarthMaterial", &mEarthRenderObject.material.specular.r);
+		ImGui::DragFloat("Shininess##EarthMaterial", &mEarthRenderObject.material.shininess, 0.01f, 0.0f, 1000.0f);
+	}
+	if (ImGui::CollapsingHeader("Brick Material", ImGuiTreeNodeFlags_DefaultOpen))
+	{
+		ImGui::ColorEdit4("Emissive##BrickMaterial", &mBrickRenderObject.material.emissive.r);
+		ImGui::ColorEdit4("Ambient##BrickMaterial", &mBrickRenderObject.material.ambient.r);
+		ImGui::ColorEdit4("Diffuse##BrickMaterial", &mBrickRenderObject.material.diffuse.r);
+		ImGui::ColorEdit4("Specular##BrickMaterial", &mBrickRenderObject.material.specular.r);
+		ImGui::DragFloat("Shininess##BrickMaterial", &mBrickRenderObject.material.shininess, 0.01f, 0.0f, 1000.0f);
+	}
+	if (ImGui::CollapsingHeader("Mud Material", ImGuiTreeNodeFlags_DefaultOpen))
+	{
+		ImGui::ColorEdit4("Emissive##MudMaterial", &mMudRenderObject.material.emissive.r);
+		ImGui::ColorEdit4("Ambient##MudMaterial", &mMudRenderObject.material.ambient.r);
+		ImGui::ColorEdit4("Diffuse##MudMaterial", &mMudRenderObject.material.diffuse.r);
+		ImGui::ColorEdit4("Specular##MudMaterial", &mMudRenderObject.material.specular.r);
+		ImGui::DragFloat("Shininess##MudMaterial", &mMudRenderObject.material.shininess, 0.01f, 0.0f, 1000.0f);
 	}
 	ImGui::Image(
 		mRenderTarget.GetRawData(),
