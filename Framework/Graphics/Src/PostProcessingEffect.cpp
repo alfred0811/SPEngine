@@ -93,7 +93,7 @@ void PostProcessingEffect::Begin()
 	case Mode::Wave:
 	{
 		data.param0 = mWaveLength;
-		data.param1 = mWaveLength;
+		data.param1 = mNumWaves;
 	}
 	break;
 	default:

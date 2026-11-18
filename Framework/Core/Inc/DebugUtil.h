@@ -6,7 +6,7 @@ using namespace SPEngine;
 using namespace SPEngine::Core;
 
 #if defined(_DEBUG)
-#define LOG(format, ...);\
+#define LOG(format, ...)\
 	do{\
 		char _buffer[256];\
 		int _res = snprintf(_buffer, std::size(_buffer), "{%.3f}: "##format##"\n", TimeUtil::GetTime(), __VA_ARGS__);\
