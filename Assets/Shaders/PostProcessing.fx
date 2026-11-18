@@ -16,7 +16,7 @@ SamplerState textureSampler : register(s0);
 
 struct VS_INPUT
 {
-    float3 position : POSITIONT;
+    float3 position : POSITION;
     float2 texCoord : TEXCOORD;
 };
 
@@ -52,8 +52,8 @@ float4 PS(VS_OUTPUT input) : SV_Target
     }
     else if (mode == 3) // mirror
     {
-        float4 texCoord = input.texCoord;
-        texCoord.x *= param1;
+        float2 texCoord = input.texCoord;
+        texCoord.x *= param0;
         texCoord.y *= param1;
         finalColor = textureMap0.Sample(textureSampler, texCoord);
     }
@@ -71,7 +71,7 @@ float4 PS(VS_OUTPUT input) : SV_Target
         + textureMap0.Sample(textureSampler, float2(u - param0, v + param1))
         + textureMap0.Sample(textureSampler, float2(u + param0, v - param1))
         + textureMap0.Sample(textureSampler, float2(u - param0, v - param1));
-        finalColor *= 12.0f;
+        finalColor /= 9.0f; // average of the 9 samples
     }
     else if (mode == 5) // combine 2
     {
@@ -86,7 +86,7 @@ float4 PS(VS_OUTPUT input) : SV_Target
     }
     else if (mode == 7) // chromatic aberration
     {
-        float2 distortion = float2(param0 - param1);
+        float2 distortion = float2(param0, param1);
         float4 redChannel = textureMap0.Sample(textureSampler, input.texCoord + distortion.x * input.texCoord);
         float4 greenChannel = textureMap0.Sample(textureSampler, input.texCoord);
         float4 blueChannel = textureMap0.Sample(textureSampler, input.texCoord + distortion.y * input.texCoord);

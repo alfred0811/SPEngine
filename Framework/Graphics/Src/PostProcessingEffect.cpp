@@ -13,14 +13,15 @@ namespace
 {
 	const char* gModeNames[] =
 	{
-		"None"
-		"Monochrome"
-		"Invert"
-		"Mirror"
-		"Blur"
-		"Combine2"
-		"MotionBlur"
-		"ChromaticAberration"
+		// names shown in the DebugUI combo box (order must match the Mode enum)
+		"None",
+		"Monochrome",
+		"Invert",
+		"Mirror",
+		"Blur",
+		"Combine2",
+		"MotionBlur",
+		"ChromaticAberration",
 		"Wave"
 	};
 }
