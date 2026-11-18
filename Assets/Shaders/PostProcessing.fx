@@ -82,7 +82,18 @@ float4 PS(VS_OUTPUT input) : SV_Target
     }
     else if (mode == 6) // motion blur
     {
-        
+        // radial (zoom) blur: average samples taken along the line from the
+        // pixel toward the screen center; param0 = blur strength / screen width
+        const int sampleCount = 10;
+        float2 center = float2(0.5f, 0.5f);
+        float2 dir = input.texCoord - center;
+        [unroll]
+        for (int i = 0; i < sampleCount; ++i)
+        {
+            float2 texCoord = input.texCoord - dir * (param0 * i);
+            finalColor += textureMap0.Sample(textureSampler, texCoord);
+        }
+        finalColor /= sampleCount;
     }
     else if (mode == 7) // chromatic aberration
     {
