@@ -71,19 +71,23 @@ void GameState::Update(float deltaTime)
 }
 void GameState::Render()
 {
-	SimpleDraw::AddGroundPlane(20.0f, Colors::LightGray);
-	SimpleDraw::Render(mCamera);
+	// render the scene into the render target
+	mRenderTarget.BeginRender();
+		SimpleDraw::AddGroundPlane(20.0f, Colors::LightGray);
+		SimpleDraw::Render(mCamera);
 
-	// render target render
 		mStandardEffect.Begin();
-				mStandardEffect.Render(mCharacter);
-				mStandardEffect.Render(mCharacter2);
-				mStandardEffect.Render(mCharacter3);
-				mStandardEffect.Render(mGround);
-			mStandardEffect.End();
-		mRenderTarget.EndRender();
+			mStandardEffect.Render(mCharacter);
+			mStandardEffect.Render(mCharacter2);
+			mStandardEffect.Render(mCharacter3);
+			mStandardEffect.Render(mGround);
+		mStandardEffect.End();
+	mRenderTarget.EndRender();
 
-		mPostProcessingEffect.Begin();
+	// draw the render target to the screen through the post processing effect
+	mPostProcessingEffect.Begin();
+		mPostProcessingEffect.Render(mScreenQuad);
+	mPostProcessingEffect.End();
 }
 void GameState::DebugUI()
 {
