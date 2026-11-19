@@ -72,7 +72,7 @@ namespace
 
 	void SimpleDrawImpl::AddFace(const Math::Vector3& v0, const Math::Vector3& v1, const Math::Vector3& v2, const Color& color)
 	{
-		if (mLineVertexCount + 3 <= mMaxVertexCount)
+		if (mFaceVertexCount + 3 <= mMaxVertexCount)
 		{
 			mFaceVertices[mFaceVertexCount++] = { v0, color };
 			mFaceVertices[mFaceVertexCount++] = { v1, color };

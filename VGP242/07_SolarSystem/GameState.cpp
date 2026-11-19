@@ -250,7 +250,6 @@ void GameState::Update(float deltaTime)
 	
 	// Moon Rotation around the Earth ========================================================
 	mMoonOrbitAngle += (0.0103f + gOrbitalRotationSpeed) * deltaTime;
-	mMoonOrbitAngle += (0.0103f + gOrbitalRotationSpeed) * deltaTime;
 
 	Math::Vector3 earthPos = Math::GetTranslation(mEarth.matWorld);
 	Math::Matrix4 moonOrbit = Math::Matrix4::RotationY(mMoonOrbitAngle);

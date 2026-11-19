@@ -17,9 +17,9 @@ namespace SPEngine::Graphics
 		~TextureManager();
 
 		TextureManager(const TextureManager&) = delete;
-		TextureManager(const TextureManager&&) = delete;
+		TextureManager(TextureManager&&) = delete;
 		TextureManager& operator=(const TextureManager&) = delete;
-		TextureManager& operator=(const TextureManager&&) = delete;
+		TextureManager& operator=(TextureManager&&) = delete;
 
 		void SetRootDirectory(const std::filesystem::path& root);
 		TextureId LoadTexture(const std::filesystem::path& fileName, bool useRootDir = true);

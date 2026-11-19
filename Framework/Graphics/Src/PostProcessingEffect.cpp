@@ -13,14 +13,15 @@ namespace
 {
 	const char* gModeNames[] =
 	{
-		"None"
-		"Monochrome"
-		"Invert"
-		"Mirror"
-		"Blur"
-		"Combine2"
-		"MotionBlur"
-		"ChromaticAberration"
+		// names shown in the DebugUI combo box (order must match the Mode enum)
+		"None",
+		"Monochrome",
+		"Invert",
+		"Mirror",
+		"Blur",
+		"Combine2",
+		"MotionBlur",
+		"ChromaticAberration",
 		"Wave"
 	};
 }
@@ -93,7 +94,7 @@ void PostProcessingEffect::Begin()
 	case Mode::Wave:
 	{
 		data.param0 = mWaveLength;
-		data.param1 = mWaveLength;
+		data.param1 = mNumWaves;
 	}
 	break;
 	default:
