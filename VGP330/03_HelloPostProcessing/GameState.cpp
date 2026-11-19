@@ -18,7 +18,7 @@ void GameState::Initialize()
 
 
 	// set up render object
-	mCharacter.Initialize(L"Character01/Capoeira.model");
+	mCharacter.Initialize(L"Character01/Ty.model");
 	mCharacter.transform.position = { 0.0f, 0.0f, 0.0f };
 
 	mCharacter2.Initialize(L"Character02/Ch14_nonPBR.model");
