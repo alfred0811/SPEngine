@@ -1,2 +1,10 @@
-﻿  StandardEffect.cpp
+﻿  Terrain.cpp
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\Terrain.cpp(67,30): warning C4018: '>=': signed/unsigned mismatch
+  (compiling source file '/Src/Terrain.cpp')
+  
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\Terrain.cpp(67,50): warning C4018: '>=': signed/unsigned mismatch
+  (compiling source file '/Src/Terrain.cpp')
+  
+  TerrainEffect.cpp
+  Generating Code...
   Graphics.vcxproj -> D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\x64\Debug\Graphics.lib

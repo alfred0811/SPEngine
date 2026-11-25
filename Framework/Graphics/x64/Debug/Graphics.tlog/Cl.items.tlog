@@ -1,3 +1,4 @@
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\BlendState.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\BlendState.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\Camera.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\Camera.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ConstantBuffer.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\ConstantBuffer.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\DebugUI.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\DebugUI.obj
@@ -15,6 +16,8 @@ D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\Sa
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\ShadowEffect.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\ShadowEffect.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\SimpleDraw.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\SimpleDraw.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\StandardEffect.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\StandardEffect.obj
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\Terrain.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\Terrain.obj
+D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\TerrainEffect.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\TerrainEffect.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\Texture.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\Texture.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\TextureManager.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\TextureManager.obj
 D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\Src\VertexShader.cpp;D:\LaSalle_College(2)\3D_Graphics_Programming\SPEngine\Framework\Graphics\x64\Debug\VertexShader.obj
